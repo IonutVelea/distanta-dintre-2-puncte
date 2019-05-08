@@ -1,0 +1,34 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+
+
+struct Punct
+{
+	int x;
+	int y;
+};
+
+float lungime(Punct *P1, Punct *P2)
+{
+	float L = sqrt((P1->x - P2->x)*(P1->x - P2->x) + (P1->y - P2->y)*(P1->y - P2->y));
+	return L;
+}
+
+int main()
+{
+	Punct P1, P2;
+	float L;
+
+	cout << "Introduceti coordonatele primului punct: " << endl;
+	cin >> P1.x;
+	cin >> P1.y;
+	cout << "Introduceti coordonatele celui de-al doilea punct: " << endl;
+	cin >> P2.x;
+	cin >> P2.y;
+	cout << "Lungimea dintre cele doua puncte este: " << lungime(&P1, &P2) << endl;
+
+	system("pause");
+	return 0;
+}
+
